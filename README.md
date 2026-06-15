@@ -5,7 +5,7 @@ This project helps users manage daily tasks efficiently with features like authe
 
 # 🌐 Live Demo
 
-[👉 Click Here to Open Live App⁠](https://gayatri162.github.io/-Task-Management-System/)
+[👉 Click Here to Open Live App⁠](https://gayatri162.github.io/Task-Management-System/)
 
 
 ## 🚀 Features
