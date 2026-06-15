@@ -5,7 +5,7 @@ This project helps users manage daily tasks efficiently with features like authe
 
 # 🌐 Live Demo
 
-[👉 Click Here to Open Live App⁠] ()
+[👉 Click Here to Open Live App⁠](https://gayatri162.github.io/-Task-Management-System/)
 
 
 ## 🚀 Features
@@ -36,10 +36,11 @@ This project helps users manage daily tasks efficiently with features like authe
    git clone
    https://github.com/gayatri162/Task-Management-System.git
 
-2. Go to project folder
-cd Task Manager
+2. Go to project folder 
+   ```bash
+   cd Task Manager
  
-3. Open `index.html` in your browser
+4. Open `index.html` in your browser
 OR simply double click the file.
 
 ## 👩‍💻 Author
