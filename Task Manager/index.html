@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task Management System</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="navbar">
+  <button class="theme-btn" id="themeToggle">🌙</button>
+</div>
+
+<h1>🗒️ Task Management System</h1>
+
+<!-- LOGIN SECTION -->
+
+<div id="auth-section">
+
+<h2>Login / Signup</h2>
+
+<input type="text" id="username" placeholder="Username">
+
+<input type="password" id="password" placeholder="Password">
+
+<div class="auth-btns">
+<button onclick="signup()">Sign Up</button>
+<button onclick="login()">Login</button>
+</div>
+
+</div>
+
+<!-- APP SECTION -->
+
+<div id="app-section">
+
+<div class="top-bar">
+
+<input
+type="text"
+id="taskInput"
+placeholder="Enter task">
+
+<input
+type="date"
+id="dueDate"> 
+
+<select id="prioritySelect">
+ <option value="high">High</option>
+ <option value="medium">Medium</option>
+ <option value="low">Low</option>
+</select>
+
+<button type="button" class="add-btn" title="Add Task">+</button>
+
+</div>
+
+<div class="search-box">
+<input
+type="text"
+id="searchInput"
+placeholder="Search task..."
+onkeyup="searchTask()">
+</div>
+
+<div class="stats">
+
+<div>Total: <span id="total">0</span></div>
+
+<div>Pending: <span id="pending">0</span></div>
+
+<div>Completed: <span id="completed">0</span></div>
+
+</div>
+
+<p id="emptyMsg" style="display:none;">
+ No Tasks Yet 🚀
+</p>
+
+<ul id="taskList"></ul>
+
+<button id="clearAllBtn">Clear All Tasks</button>
+
+<button class="logout" onclick="logout()">
+ Logout
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
