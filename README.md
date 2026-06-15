@@ -1,13 +1,12 @@
 # 🗒️ Task Management System
 
-A responsive and interactive Task Management Web App built using HTML, CSS, and Vanilla JavaScript.
+A responsive and interactive Task Management Web App built using HTML, CSS, and JavaScript.
 This project helps users manage daily tasks efficiently with features like authentication, priority sorting, drag-and-drop, and dark mode.
 
 # 🌐 Live Demo
 
 [👉 Click Here to Open Live App⁠] ()
 
-## 📸 Preview
 
 ## 🚀 Features
 
@@ -44,6 +43,7 @@ OR simply double click the file.
 ## 👩‍💻 Author
 
 Gayatri
+
 Engineering Student | Web Development Enthusiast
 
 # 📬 connect with me 
@@ -57,4 +57,5 @@ If you like this project:
 * Give it a ⭐ on GitHub
 * Share with friends
 * Feedback is always welcome
+
 ⸻
