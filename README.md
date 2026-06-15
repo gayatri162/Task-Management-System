@@ -32,12 +32,14 @@ This project helps users manage daily tasks efficiently with features like authe
 ## ⚙️ How to Run Locally
 
 1. Clone the repository
-git clone https://github.com/gayatri162/task-manager.git
+   ```bash 
+   git clone
+   https://github.com/gayatri162/Task-Management-System.git
 
 2. Go to project folder
-cd task-manager
+cd Task Manager
  
-3. Open index.html in your browser
+3. Open `index.html` in your browser
 OR simply double click the file.
 
 ## 👩‍💻 Author
@@ -47,8 +49,8 @@ Gayatri
 Engineering Student | Web Development Enthusiast
 
 # 📬 connect with me 
-* GitHub: [gayatri162](https://github.com/gayatri162)
-* LinkedIn: [gayatri-singh](https://www.linkedin.com/in/gayatri-singh/)
+* [GitHub](https://github.com/gayatri162)
+* [LinkedIn](https://www.linkedin.com/in/gayatri-singh/)
  
 ## ⭐ Support
 
@@ -58,4 +60,3 @@ If you like this project:
 * Share with friends
 * Feedback is always welcome
 
-⸻
