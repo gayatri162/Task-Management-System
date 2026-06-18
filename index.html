@@ -3,373 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description"content="Gayatri Singh - Full Stack Web Developer Portfolio">
-<title>Gayatri Singh | Full-Stack Web Developer</title>
+<title>Task Management System</title>
+
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
 
+<div class="container">
 
-  <header>
-  <div class="logo">GAYATRI</div>
-
-  <nav>
-      <a href="#skills">SKILLS</a>
-      <a href="#portfolio">PORTFOLIO</a>
-      <a href="#resume">RESUME</a>
-      <a href="#contact">CONTACT</a>
-  </nav>
-
-  <div class="header-actions">
-    <button id="themeBtn" class="theme-btn"> 
-        <i class="fa-solid fa-moon"></i>
-    </button>
-
-    <a href="assets/Resume.pdf" 
-       download 
-       class="resume-btn">
-       RESUME
-    </a>  
- </div>
-</header>
-
-  <section class="hero">
-
-  <p class="hello">HELLO, I'M —</p>
-
-  <h1>
-    <span class="green">GAYATRI</span><br>
-    SINGH
-  </h1>
-
-  <h3>I AM A FULL-STACK WEB DEVELOPER</h3>
-
-  <p class="desc">
-    <span class="black">Engineering Student | Web Developer | Tech Enthusiast</span><br>
-    Turning ideas into interactive web experiences. As an engineering student and aspiring developer, I love creating clean, functional, and visually appealing websites while constantly learning new technologies.
-  </p>
-
-  <div class="buttons">
-      <a href="#portfolio" class="primary">MY PORTFOLIO</a>
-      <a href="#contact" class="secondary">HIRE ME</a>
-  </div>
-
-</section>
-
-<section id="skills">
-
-<h2>PROFESSIONAL SKILLS</h2>
-
-<div class="skill-grid">
-
-<div class="skill">
-<h3>Frontend Development</h3>
-<p>HTML5, CSS3, JavaScript, React.js, responsive UI design and modern web interfaces</p>
+<div class="navbar">
+  <button class="theme-btn" id="themeToggle">🌙</button>
 </div>
 
-<div class="skill">
-<h3>Backend Development</h3>
-<p>Node.js, Express.js</p>
-</div>
+<h1>🗒️ Task Management System</h1>
 
-<div class="skill">
-<h3>Database Management</h3>
-<p>MongoDB, MySQL and database design</p>
-</div>
+<!-- LOGIN SECTION -->
 
-<div class="skill">
-<h3>Programming Languages</h3>
-<p>JavaScript, C, Python with emphasis on web development.</p>
-</div>
+<div id="auth-section">
 
-<div class="skill">
-<h3>Data Structures & Algorithms</h3>
-<p>Strong Understanding of Arrays, Linked lists,Trees, Graphs and problem-solving using efficient algorithm</p>
-</div>
+<h2>Login / Signup</h2>
 
-<div class="skill">
-<h3>Tools & Technologies</h3>
-<p>Git, GitHub, Vs Code, Postman And Netlify</p>
+<input type="text" id="username" placeholder="Username">
+
+<input type="password" id="password" placeholder="Password">
+
+<div class="auth-btns">
+<button onclick="signup()">Sign Up</button>
+<button onclick="login()">Login</button>
 </div>
 
 </div>
 
-</section>
-<section id="portfolio" class="portfolio-section">
+<!-- APP SECTION -->
 
-    <h2>PORTFOLIO</h2>
-    <p class="subtitle">Projects</p>
+<div id="app-section">
 
-    <div class="portfolio-grid">
+<div class="top-bar">
 
-        <div class="project-card">
+<input
+type="text"
+id="taskInput"
+placeholder="Enter task">
 
-            <div class="project-image purple">
-                <h3>To-Do List</h3>
-            </div>
+<input
+type="date"
+id="dueDate"> 
 
-            <div class="project-content">
-                <span>FULL-STACK DEVELOPMENT</span>
+<select id="prioritySelect">
+ <option value="high">High</option>
+ <option value="medium">Medium</option>
+ <option value="low">Low</option>
+</select>
 
-                <h3>Advance To-Do List</h3>
+<button type="button" class="add-btn" title="Add Task">+</button>
 
-                <p>
-                    Task Management application with add, edit, delete and task tracking features. 
-                </p>
+</div>
 
-                <a href="https://gayatri162.github.io/-To-Do-List/">VIEW PROJECT</a>
-            </div>
+<div class="search-box">
+<input
+type="text"
+id="searchInput"
+placeholder="Search task..."
+onkeyup="searchTask()">
+</div>
 
-        </div>
+<div class="stats">
 
-        <div class="project-card">
+<div>Total: <span id="total">0</span></div>
 
-            <div class="project-image gray">
-                <h3>Tinder Dog Website</h3>
-            </div>
+<div>Pending: <span id="pending">0</span></div>
 
-            <div class="project-content">
-                <span>RESPONSIVE WEBSITE</span>
+<div>Completed: <span id="completed">0</span></div>
 
-                <h3>Tinder Dog Landing Page</h3>
+</div>
 
-                <p>
-                   A fun and responsive landing page inspired by tinder for dogs. Designed using HTML, CSS, and Bootstrap.
-                </p>
+<p id="emptyMsg" style="display:none;">
+ No Tasks Yet 🚀
+</p>
 
-                <a href="">VIEW PROJECT</a>
-            </div>
+<ul id="taskList"></ul>
 
-        </div>
+<button id="clearAllBtn">Clear All Tasks</button>
 
-        <div class="project-card">
+<button class="logout" onclick="logout()">
+ Logout
+</button>
 
-            <div class="project-image cream">
-                <h3>Password Generator</h3>
-            </div>
+</div>
 
-            <div class="project-content">
-                <span>JAVASCRIPT PROJECT</span>
-
-                <h3>Password Generator</h3>
-
-                <p>
-                    Generate secure random and user-friendly password generator
-                    with customizable options.
-                </p>
-
-                <a href="https://gayatri162.github.io/Passward-Generator/">VIEW PROJECT</a>
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="github-btn">
-        <a href="https://github.com/gayatri162">
-            VIEW MORE ON GITHUB
-        </a>
-    </div>
-
-</section>
-<section id="resume" class="resume-section">
-
-    <h2>RESUME</h2>
-
-    <a href="assets/Resume.pdf" target="_blank"class="resume-btn">
-        VIEW RESUME
-    </a>
-
-    <div class="resume-grid">
-
-        <div class="resume-box">
-            <h3>Education</h3>
-
-            <div class="timeline">
-                <span>2025 - Present</span>
-                <h4>B.Tech Computer Science</h4>
-                <p>Raj Kumar Goel Institue of Technology & Management</p>
-                <p>CGPA: XX/10</p>
-            </div>
-
-        </div>
-
-        <div class="resume-box">
-            <h3>Experience & Leadership</h3>
-
-            <div class="timeline">
-                <span>May 2026 - July 2026</span>
-                <h4>Full Stack Web Developer Intern</h4>
-                <p>"Thiranex" Technologies</p>
-            </div>
-
-            <div class="timeline">
-                <h4>Building responsive websites</h4>
-                <p>JavaScript based web applications.</p>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="achievements">
-
-    <h2>ACHIEVEMENTS & HIGHLIGHTS</h2>
-
-    <div class="achievement-grid">
-
-        <div class="achievement-card">
-
-            <p>
-                Full Stack Web Development Certification 
-            </p>
-
-            <div class="profile">
-                <div class="circle">U</div>
-
-                <div>
-                    <h4>Udemy</h4>
-                    <span>August 2025</span>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="achievement-card">
-
-            <p>
-                AI for All Certification
-            </p>
-
-            <div class="profile">
-                <div class="circle">T</div>
-
-                <div>
-                    <h4>TCS iON</h4>
-                    <span>April 2026</span>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="achievement-card">
-
-            <p>
-                Built Full Stack applications using
-                React, Node.js and MongoDB.
-            </p>
-
-            <div class="profile">
-                <div class="circle">D</div>
-
-                <div>
-                    <h4>Development Skills</h4>
-                    <span>Hands-on Experience</span>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="contact" class="contact-section">
-
-    <div class="contact-container">
-
-        <div class="contact-info">
-
-            <div class="info-card">
-                <h4>ADDRESS</h4>
-                <p>Ghaziabad, Uttar Pradesh, India</p>
-            </div>
-
-            <div class="info-card">
-                <h4>GITHUB</h4>
-               <a href="https://github.com/gayatri162" target="_blank">github.com/gayatri162</a>
-            </div>
-
-            <div class="info-card">
-                <h4>EMAIL</h4>
-                <a href="mailto:gayatrisingh44567@gmail.com">gayatrisingh44567@gmail.com</a>
-            </div>
-
-            <div class="info-card">
-                <h4>PHONE</h4>
-                <p>+91 8750339724</p>
-            </div>
-
-        </div>
-
-        <div class="contact-form-box">
-
-            <form id="contactForm">
-
-                <div class="row">
-
-                    <div>
-                        <label>FIRST NAME</label>
-                        <input type="text" placeholder="Your first name">
-                    </div>
-
-                    <div>
-                        <label>LAST NAME</label>
-                        <input type="text" placeholder="Your last name">
-                    </div>
-
-                </div>
-
-                <div class="row">
-
-                    <div>
-                        <label>EMAIL ADDRESS</label>
-                        <input type="email" placeholder="your@email.com">
-                    </div>
-
-                    <div>
-                        <label>SUBJECT</label>
-                        <input type="text" placeholder="Subject">
-                    </div>
-
-                </div>
-
-                <label>YOUR MESSAGE</label>
-
-                <textarea rows="7"
-                placeholder="Write your message here..."></textarea>
-
-                <button type="submit">
-                    SEND MESSAGE
-                </button>
-
-            </form>
-
-        </div>
-
-    </div>
-
-</section>
-<footer class="footer">
-    <h3>Gayatri</h3>
-
-    <div class="social-icons">
-        <a href="mailto:gayatrisingh44567@gmail.com" class="icon">📧</a>
-
-        <a href="https://www.linkedin.com/in/gayatri-singh/"
-           target="_blank"
-           class="icon">in</a>
-    </div>
-
-    <p>© 2026 Gayatri. All Rights Reserved.</p>
-</footer>
+</div>
 
 <script src="script.js"></script>
 
 </body>
 </html>
-  
