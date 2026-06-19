@@ -32,6 +32,10 @@ margin:auto;
 padding:20px;
 }
 
+input[type="date"]{
+ color-scheme:light dark;
+}
+
 .sidebar{
 background:white;
 padding:20px;
