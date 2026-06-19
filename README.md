@@ -1,7 +1,6 @@
 # 🗒️ Task Management System
 
-A responsive and interactive Task Management Web App built using HTML, CSS, and JavaScript.
-This project helps users manage daily tasks efficiently with features like authentication, priority sorting, drag-and-drop, and dark mode.
+A modern and responsive Task Management System built using HTML, CSS, and JavaScript.
 
 # 🌐 Live Demo
 
@@ -10,18 +9,22 @@ This project helps users manage daily tasks efficiently with features like authe
 
 ## 🚀 Features
 
-*  🔐 User Authentication (Signup / Login using LocalStorage)
-*  ➕ Add new tasks
-*  📝 Edit existing tasks
-*  🗑️ Delete tasks
-*  🔍 Real-time search functionality
-*  🔅 Dark / Light mode toggle
-*  📊 Task statistics (Total / Completed / Pending)
-*  📅 Due date support
-*  ⚡️ Priority system (High / Medium / Low)
-*  🔄 Drag & Drop task reordering
-*  📲 Fully responsive design
+*   User Authentication (Signup / Login)
+*   Add, Edit, and Delete Tasks
+*   Mark Tasks as Completed
+*   Important Tasks Management
+*   Priority system (High / Medium / Low)
+*   Due Date Tracking
+*   Search Tasks
+*   Dashboard Statistics
+*   Progrss Tracking Circle
+*   Upcoming Tasks Section
+*   Drag and Drop Task Re-ordering
+*   Dark / Light Mode
+*   Responsive Desgin
+*   Local Storage Support
 
+  
 ##  🛠️ Tech Stack
 
 - HTML5
@@ -29,25 +32,25 @@ This project helps users manage daily tasks efficiently with features like authe
 - JavaScript (ES6)
 - LocalStorage API
 
-## ⚙️ How to Run Locally
+## Project Overview
 
-1. Clone the repository
-   ```bash 
-   git clone
-   https://github.com/gayatri162/Task-Management-System.git
+This project helps users organize, prioritize, and track their daily tasks efficiently through an interactive dashboard interface.
 
-2. Go to project folder 
-   ```bash
-   cd Task Manager
- 
-4. Open `index.html` in your browser
-OR simply double click the file.
+The application stores user data and tasks locally using the browser’s Local Storage, allowing users to access their saved tasks even after refreshing the page.
+
+## 🔮 Future Improvements
+
+* Backend Integration
+* Database Support
+* User Profiles
+* Task Categories
+* Notifications and Reminders
+
 
 ## 👩‍💻 Author
 
 Gayatri
 
-Engineering Student | Web Development Enthusiast
 
 # 📬 connect with me 
 * [GitHub](https://github.com/gayatri162)
