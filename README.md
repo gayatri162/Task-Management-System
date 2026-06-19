@@ -6,6 +6,8 @@ A modern and responsive Task Management System built using HTML, CSS, and JavaSc
 
 [👉 Click Here to Open Live App⁠](https://gayatri162.github.io/Task-Management-System/)
 
+## Preview :
+![Screenshot](Demo.png)
 
 ## 🚀 Features
 
