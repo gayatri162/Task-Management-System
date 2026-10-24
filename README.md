@@ -1,6 +1,6 @@
 # 🗒️ Task Management System
 
-A modern and responsive Task Management System built using HTML, CSS, and JavaScript.
+A responsive task manager for organizing tasks by priority and deadline, tracking progress, and using focused study sessions.
 
 # 🌐 Live Demo
 
@@ -22,6 +22,7 @@ A modern and responsive Task Management System built using HTML, CSS, and JavaSc
 *   Progrss Tracking Circle
 *   Upcoming Tasks Section
 *   Drag and Drop Task Re-ordering
+*   25-minute focus timer with start, pause, reset, and completed-session count
 *   Dark / Light Mode
 *   Responsive Desgin
 *   Local Storage Support
