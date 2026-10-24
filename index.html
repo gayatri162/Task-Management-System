@@ -61,6 +61,14 @@
 ✅ Completed
 <span id="completedCount">0</span>
 </li>
+ <li id="pendingTasks">
+🕒 Pending
+<span id="pendingCount">0</span>
+</li>
+ <li id="overdueTasks">
+⚠️ Overdue
+<span id="overdueCount">0</span>
+</li>
 
  </ul>
 
@@ -91,6 +99,7 @@
 <button 
   type="button" 
   class="add-btn" 
+  id="addTaskBtn"
   title="Add Task">
   +
 </button>
@@ -122,6 +131,18 @@
 </div>
 
 <div class="right-panel">
+        <section class="focus-card" id="focusCard">
+          <div class="focus-heading"><span>🍅</span><div><h3>Focus Mode</h3><p>One task at a time. You’ve got this.</p></div></div>
+          <p class="focus-task-label">Selected task</p>
+          <strong id="focusTaskName">Choose Focus on any task</strong>
+          <div class="focus-clock" id="focusTime" aria-live="polite">25:00</div>
+          <div class="focus-actions">
+            <button id="focusStart">Start</button>
+            <button id="focusPause" class="secondary-btn">Pause</button>
+            <button id="focusReset" class="secondary-btn">Reset</button>
+          </div>
+          <p class="focus-sessions">Completed sessions: <strong id="focusSessionsCount">0</strong></p>
+        </section>
         <div class="overview-circle">
           <div class="circle">
           <div class="circle-content">
