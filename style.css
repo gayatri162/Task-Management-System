@@ -701,3 +701,39 @@ padding:15px;
 color:gray;
 font-size:14px;
 }
+/* Hackathon upgrade: deadline intelligence + focus mode */
+html { scroll-behavior: smooth; }
+button:focus-visible, input:focus-visible, select:focus-visible, li:focus-visible { outline: 3px solid #a78bfa; outline-offset: 3px; }
+#taskList li.is-overdue { border-left-color: #dc2626; background: #fff1f2; }
+#taskList li.is-due-today { border-left-color: #d97706; background: #fffbeb; }
+.status-pill { display: inline-flex; align-items: center; width: fit-content; padding: 4px 9px; border-radius: 999px; font-size: 12px; font-weight: 700; background: #e0e7ff; color: #3730a3; margin-top: 5px; }
+.status-pill.overdue { background: #fee2e2; color: #991b1b; }
+.status-pill.due-today, .status-pill.due-tomorrow { background: #fef3c7; color: #92400e; }
+.status-pill.completed { background: #dcfce7; color: #166534; text-decoration: none; }
+.task-row { display: flex; align-items: center; gap: 12px; }
+.task-row .center { display: flex; flex-direction: column; gap: 7px; flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.task-row .right { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.task-row .right button { padding: 7px 10px; font-size: 12px; }
+.important-btn.active { background: #f59e0b; color: #fff; }
+.delete-btn { background: #ef4444; }
+.focus-task-btn { background: #0f766e; }
+.focus-card { background: linear-gradient(145deg, #312e81, #6d28d9); color: white; padding: 22px; border-radius: 20px; box-shadow: 0 10px 24px rgba(79,70,229,.2); }
+.focus-heading { display: flex; align-items: center; gap: 12px; }
+.focus-heading > span { font-size: 28px; }
+.focus-heading h3 { margin: 0 0 4px; }
+.focus-heading p, .focus-card .focus-task-label { color: #ddd6fe; font-size: 13px; }
+.focus-task-label { margin-top: 20px; }
+#focusTaskName { display: block; margin-top: 5px; overflow-wrap: anywhere; }
+.focus-clock { font-size: clamp(42px, 5vw, 56px); text-align: center; font-weight: 800; letter-spacing: 2px; padding: 12px 0; font-variant-numeric: tabular-nums; }
+.focus-actions { display: flex; gap: 7px; }
+.focus-actions button { flex: 1; padding: 10px 6px; background: white; color: #4c1d95; font-weight: 700; }
+.focus-actions .secondary-btn { background: rgba(255,255,255,.15); color: white; border: 1px solid rgba(255,255,255,.35); }
+.focus-sessions { font-size: 13px; margin-top: 16px; color: #ede9fe; }
+#emptyMsg { padding: 18px; text-align: center; color: #64748b; }
+body.dark #taskList li.is-overdue { background: #3b1d2a; }
+body.dark #taskList li.is-due-today { background: #3b2e16; }
+body.dark .status-pill.overdue { background: #7f1d1d; color: #fee2e2; }
+body.dark .status-pill.due-today, body.dark .status-pill.due-tomorrow { background: #78350f; color: #fef3c7; }
+body.dark .status-pill { background: #312e81; color: #e0e7ff; }
+@media (max-width: 1000px) { #app-section { grid-template-columns: 1fr; } .sidebar { order: 0; } .main-content { order: 1; } .right-panel { order: 2; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; } .focus-card { grid-column: 1 / -1; } }
+@media (max-width: 600px) { body { padding: 10px; } .container { padding: 8px; } .welcome h2 { font-size: 30px; overflow-wrap: anywhere; } .welcome p { font-size: 15px; } #auth-section, .main-content { padding: 20px; } .right-panel { display: flex; } .task-row { align-items: flex-start; } .task-row .right { width: 100%; } .task-row { flex-wrap: wrap; } .task-row .center { flex-basis: calc(100% - 45px); } .top-bar { gap: 6px; } .top-bar input:first-child { flex-basis: 100%; } #prioritySelect { flex: 1; } }
